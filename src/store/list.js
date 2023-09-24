@@ -1,10 +1,10 @@
 import { writable } from 'svelte/store';
-import cryptoRandomString from 'crypto-random-string';
+import shortid from 'shortid';
 import _find from 'lodash/find';
 import _remove from 'lodash/remove';
 import _cloneDeep from 'lodash/cloneDeep';
 
-const crypto = () => cryptoRandomString({ length: 10 });
+const crypto = () => shortid.generate();
 
 const repoLists = JSON.parse(window.localStorage.getItem('lists')) || [];
 
