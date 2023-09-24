@@ -6,7 +6,7 @@
 		backgroundColor: 'darkgray',
 		backgroundImage: 'url(/images/bg.jpg)',
 		backgroundSize: 'cover'
-	});
+	}); 
 </script>
 
 <Header />
