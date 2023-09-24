@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
 import alias from '@rollup/plugin-alias';
+import strip from '@rollup/plugin-strip';
 
 import { spawn } from 'child_process';
 import svelte from 'rollup-plugin-svelte';
@@ -101,7 +102,7 @@ export default {
 				}
 			]
 		}),
-		
+
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
@@ -114,6 +115,11 @@ export default {
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
 		production && terser()
+
+		production && strip({
+			include: '**/*.(svelte|js)',
+		}),
+
 	],
 	watch: {
 		clearScreen: false

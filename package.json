@@ -14,7 +14,7 @@
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
-    "@rollup/plugin-strip": "^2.0.0",
+    "@rollup/plugin-strip": "^2.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "autoprefixer": "^9.8.6",
     "crypto-random-string": "3.2.0",
